@@ -1,0 +1,39 @@
+@use "base/variable" as v;
+@use 'base/mixins' as m;
+
+html {
+    font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body{
+    font-family: v.$fuente;
+    height: 100vh;
+   @include m.tablet{
+    display: grid;
+    place-items: center;
+   }
+}
+
+.contenedor{
+    width: 80%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}

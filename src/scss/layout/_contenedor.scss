@@ -1,0 +1,70 @@
+@use "base/mixins" as m;
+@use "base/variable" as v;
+
+.contenedor-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  @include m.tablet {
+    width: 80%;
+    flex-direction: row;
+
+    border: thin solid olive;
+  }
+
+  @include m.tablet {
+    .cards {
+      width: 40%;
+    }
+
+    .contenedor-datos {
+      width: 60%;
+    }
+  }
+}
+.none{
+  display: none;
+
+}
+
+.enviado{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 6rem auto;
+
+  i{
+    background: rgb(7, 2, 71);
+    color: white;
+    padding: 2rem;
+    font-size: 4rem;
+    border-radius: 50%;
+  }
+
+  .thank{
+    font-size: 5rem;
+  }
+
+  p{
+    color: darkgrey;
+    font-size: 2rem;
+  }
+
+  
+.btn{
+  background-color: v.$Very-dark-violet;
+  color: v.$White;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+}

@@ -1,0 +1,270 @@
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  height: 100vh;
+}
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.contenedor {
+  width: 80%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cards {
+  position: relative;
+}
+.cards picture img {
+  width: 100%;
+  height: 27rem;
+}
+@media (min-width: 768px) {
+  .cards picture img {
+    width: 100%;
+    height: 35rem;
+  }
+}
+@media (min-width: 768px) {
+  .cards picture img {
+    height: 90vh;
+  }
+}
+
+.card {
+  position: absolute;
+  width: 29rem;
+  height: 19rem;
+}
+.card img {
+  width: 100%;
+  height: 18rem;
+}
+@media (min-width: 768px) {
+  .card {
+    width: 32rem;
+    height: 20rem;
+  }
+  .card img {
+    width: 100%;
+    height: 20rem;
+  }
+}
+
+.anverso {
+  top: 14rem;
+  right: 9rem;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .anverso {
+    top: 11rem;
+    right: -9rem;
+  }
+}
+.anverso .nombres-card {
+  position: absolute;
+  color: white;
+  bottom: 3rem;
+  left: 1.5rem;
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  .anverso .nombres-card {
+    bottom: 3rem;
+    left: 2rem;
+  }
+}
+.anverso .numero {
+  letter-spacing: 0.5rem;
+  font-size: 1.5rem;
+}
+.anverso .nombre {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.reverso {
+  top: 4rem;
+  right: 2rem;
+}
+.reverso p {
+  position: absolute;
+  top: 8rem;
+  right: 4rem;
+  font-size: 1.3rem;
+}
+@media (min-width: 768px) {
+  .reverso {
+    top: 33rem;
+    right: -14rem;
+  }
+  .reverso p {
+    top: 9rem;
+    right: 4rem;
+  }
+}
+
+.error {
+  border: thin solid red;
+}
+
+.check {
+  border: thin solid green;
+}
+
+.contenedor-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .contenedor-card {
+    width: 80%;
+    flex-direction: row;
+    border: thin solid olive;
+  }
+}
+@media (min-width: 768px) {
+  .contenedor-card .cards {
+    width: 40%;
+  }
+  .contenedor-card .contenedor-datos {
+    width: 60%;
+  }
+}
+
+.none {
+  display: none;
+}
+
+.enviado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 6rem auto;
+}
+.enviado i {
+  background: rgb(7, 2, 71);
+  color: white;
+  padding: 2rem;
+  font-size: 4rem;
+  border-radius: 50%;
+}
+.enviado .thank {
+  font-size: 5rem;
+}
+.enviado p {
+  color: darkgrey;
+  font-size: 2rem;
+}
+.enviado .btn {
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.contenedor-datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+.contenedor-datos .datos {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .contenedor-datos .datos {
+    width: 50%;
+    margin-right: -10rem;
+  }
+}
+.contenedor-datos .btn {
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.dato {
+  margin: 0.5rem 0;
+}
+.dato h3 {
+  font-weight: bold;
+  color: hsl(278, 68%, 11%);
+}
+.dato input {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.dato input::placeholder {
+  border-color: hsl(270, 3%, 87%);
+  color: hsl(279, 6%, 55%);
+  font-size: 1.2rem;
+}
+
+.dato-fechas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dato-fecha input {
+  display: inline-block;
+  width: 8rem;
+  margin-right: 1rem;
+}
+.dato-fecha .cvv {
+  width: 10rem;
+}
+
+.imc {
+  color: red;
+  font-weight: bold;
+}

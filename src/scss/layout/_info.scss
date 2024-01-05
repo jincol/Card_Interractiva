@@ -1,0 +1,79 @@
+@use "base/mixins" as m;
+@use "base/variable" as v;
+
+.contenedor-datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 4rem;
+
+  .datos {
+    width: 100%;
+  }
+  @include m.tablet {
+    .datos {
+      width: 50%;
+      margin-right:-10rem ;
+    }
+  }
+
+  .btn{
+    background-color: v.$Very-dark-violet;
+    color: v.$White;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+}
+
+.dato {
+  margin: 0.5rem 0;
+
+  h3 {
+    font-weight: bold;
+    color: v.$Very-dark-violet;
+  }
+
+  input {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    &::placeholder {
+      border-color: v.$Light-grayish-violet;
+      color: v.$Dark-grayish-violet;
+      font-size: 1.2rem;
+    }
+
+  }
+}
+
+.dato-fechas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dato-fecha {
+  input {
+    display: inline-block;
+    width: 8rem;
+    margin-right: 1rem;
+  }
+
+  .cvv {
+    width: 10rem;
+  }
+}
+
+
+.imc{
+  color: red;
+  font-weight: bold;
+}

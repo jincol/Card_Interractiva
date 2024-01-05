@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32"   href="./images/favicon-32x32.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"  rel="stylesheet"/>
+    <link rel="stylesheet" href="./build/css/style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <section class="contenedor contenedor-card">
+      <div class="cards">
+        <picture>
+          <source srcset="./build/img/bg-main-desktop.avif" type="image/avif" />
+          <source srcset="./build/img/bg-main-desktop.webp" type="image/webp" />
+          <img  loading="lazy" src="./bg-main-desktop.png" alt="Imagen fondo"/>
+        </picture>
+        <div class="card anverso">
+          <img src="./build/img/bg-card-front.avif" alt="" />
+          <div class="nombres-card">
+            <p class="numero">0000 0000 0000 0000</p>
+            <div class="nombre">
+              <p class="nombre-card">Jane Appleseed</p>
+            <p class="fv">00/00</p>
+            </div>
+          </div>
+        </div>
+        <div class="card reverso">
+         <img src="./build/img/bg-card-back.avif" alt="">
+          <p class="ncvv">000</p>
+        </div>
+      </div>
+      <div class="contenedor-datos">
+        <form class="datos">
+          <div class="dato">
+            <h3>Cardholder Name</h3>
+            <input class="nombre" type="text" placeholder="e.g. Jane Appleseed" />
+          </div>
+          <div class="dato">
+            <h3>Card Number</h3>
+            <input class="numtar" type="number" placeholder="e.g. 1234 5678 9123 0000" />
+          </div>
+          <div class="dato dato-fechas">
+            <div class="dato-fecha">
+              <h3>Exp. Date (MM/YY)</h3>
+              <input class="mes" type="number" placeholder="MM" />
+              <input class="anio" type="number" placeholder="YY" />
+            </div>
+            <div class="dato-fecha">
+              <h3>CVV</h3>
+              <input class="cvv" type="number" placeholder="e.g. 123" />
+            </div>
+          </div>
+          <div>
+            <input class="btn" type="submit" value="Confirm" />
+          </div>
+        </form>
+      </div>
+      <div class="none">
+        <i class="fa-solid fa-check"></i>
+        <p class="thank">THANK YOU</p>
+        <p>We've added your card details</p>
+        <input class="btn" type="submit" value="Continue" />
+      </div>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./build/js/app.js"></script>
+    <script src="https://kit.fontawesome.com/715e801ef4.js" crossorigin="anonymous"></script>
+  </body>
+</html>
